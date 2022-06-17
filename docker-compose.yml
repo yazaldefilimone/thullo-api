@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres
+    container_name: thullo-postgres
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=thullo
+    networks:
+      - thullo_networks
+    volumes:
+      - thullo_postgres_db_data:/var/lib/postgres
+networks:
+  thullo_networks:
+    driver: bridge
+volumes:
+  thullo_postgres_db_data:
