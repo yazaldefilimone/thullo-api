@@ -182,7 +182,7 @@ export default {
             tsx: false,
             decorators: true,
           },
-          target: "es2017",
+          target: "es6",
           keepClassNames: true,
           transform: {
             legacyDecorator: true,
