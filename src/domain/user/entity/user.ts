@@ -1,6 +1,6 @@
 import { InvalidParamError } from '@/domain/errors/InvalidParamError';
 import { buildResponse } from './protocols';
-import { user } from '@/domain/user/protocols';
+import { user } from '@/domain/user/contracts';
 
 import { Either, left, right } from '@/shared/error-handler/either';
 import { isValidEmail, isValidName } from '@/shared/validators';
