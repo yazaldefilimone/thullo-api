@@ -40,4 +40,11 @@ describe('User', () => {
     expect(test.isLeft()).toEqual(true);
     expect(test.value).toEqual(new InvalidParamError('password'));
   });
+
+  it('Should return user with id if  receive data correct', () => {
+    const { user, fakeDataUser } = makeSut();
+    const test = user.build(fakeDataUser);
+    expect(test.isRight()).toEqual(true);
+    expect(test.value).toHaveProperty('id');
+  });
 });
