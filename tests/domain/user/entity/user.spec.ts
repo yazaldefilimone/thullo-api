@@ -24,4 +24,12 @@ describe('User', () => {
     expect(test.isLeft()).toEqual(true);
     expect(test.value).toEqual(new InvalidParamError('name'));
   });
+
+  it('Should return InvalidParamError if not receive email', () => {
+    const { user, fakeDataUser } = makeSut();
+    fakeDataUser.email = '';
+    const test = user.build(fakeDataUser);
+    expect(test.isLeft()).toEqual(true);
+    expect(test.value).toEqual(new InvalidParamError('email'));
+  });
 });
