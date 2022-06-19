@@ -50,4 +50,10 @@ describe('Validation', () => {
     const response = isValid.password(fakeData.password);
     expect(response).toEqual(false);
   });
+
+  it('Should return true if  receive correct password', () => {
+    const { isValid, fakeData } = makeSut();
+    const response = isValid.password(fakeData.password);
+    expect(response).toEqual(true);
+  });
 });
