@@ -7,7 +7,8 @@
   "author": "Yazalde Filimone <yazaldefilimon@gmail.com>",
   "scripts": {
     "dev": "ts-node",
-    "test": "jest --watchAll --passWithNoTests --runInBand --no-cache"
+    "test": "yarn jest --watchAll --passWithNoTests --runInBand --no-cache",
+    "test:ci": "yarn test -- --coverage"
   },
   "license": "MIT",
   "dependencies": {
