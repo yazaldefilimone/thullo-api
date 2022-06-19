@@ -32,4 +32,12 @@ describe('User', () => {
     expect(test.isLeft()).toEqual(true);
     expect(test.value).toEqual(new InvalidParamError('email'));
   });
+
+  it('Should return InvalidParamError if not receive password', () => {
+    const { user, fakeDataUser } = makeSut();
+    fakeDataUser.password = '';
+    const test = user.build(fakeDataUser);
+    expect(test.isLeft()).toEqual(true);
+    expect(test.value).toEqual(new InvalidParamError('password'));
+  });
 });
