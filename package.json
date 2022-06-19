@@ -7,7 +7,7 @@
   "author": "Yazalde Filimone <yazaldefilimon@gmail.com>",
   "scripts": {
     "dev": "ts-node",
-    "test": "jest --watch --passWithNoTests --runInBand --no-cache"
+    "test": "jest --watchAll --passWithNoTests --runInBand --no-cache"
   },
   "license": "MIT",
   "dependencies": {
