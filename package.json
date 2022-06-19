@@ -6,7 +6,8 @@
   "repository": "https://github.com/yazaldefilimonepinto/thullo-api",
   "author": "Yazalde Filimone <yazaldefilimon@gmail.com>",
   "scripts": {
-    "dev": "ts-node"
+    "dev": "ts-node",
+    "test": "jest --watch --passWithNoTests --runInBand --no-cache"
   },
   "license": "MIT",
   "dependencies": {
