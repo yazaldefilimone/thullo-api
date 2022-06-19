@@ -1,7 +1,7 @@
 import { user } from '../contracts';
 import { createUserProtocols } from './protocols';
 
-interface ICreateUserUseCase {
+export interface ICreateUserUseCase {
   perform: (data: ICreateUserUseCase.Input) => ICreateUserUseCase.Output;
 }
 
