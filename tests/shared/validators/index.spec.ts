@@ -24,4 +24,10 @@ describe('Validation', () => {
     const response = isValid.name(fakeData.name);
     expect(response).toEqual(false);
   });
+
+  it('Should return true if  receive correct name', () => {
+    const { isValid, fakeData } = makeSut();
+    const response = isValid.name(fakeData.name);
+    expect(response).toEqual(true);
+  });
 });
