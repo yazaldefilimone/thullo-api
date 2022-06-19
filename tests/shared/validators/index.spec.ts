@@ -43,4 +43,11 @@ describe('Validation', () => {
     const response = isValid.email(fakeData.email);
     expect(response).toEqual(true);
   });
+
+  it('Should return false if not receive correct password', () => {
+    const { isValid, fakeData } = makeSut();
+    fakeData.password = 'fake';
+    const response = isValid.password(fakeData.password);
+    expect(response).toEqual(false);
+  });
 });
